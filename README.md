@@ -21,7 +21,7 @@ This is a sample Android project that demonstrates how to integrate Google sign-
 6. Select **Android** as the application type and fill out the required information
 7. Add your app's package name and **SHA-1** signing certificate fingerprint to the Authorized Android apps section
 8. Save your changes and copy the **Client ID**
-9. Open the 'app/src/main/res/values/strings.xml' file and replace the 'google_signin_client_id' value with your copied Client ID
+9. Open the 'app/src/main/res/values/strings.xml' file and replace the 'google_signin_client_id' value with your copied ***Client ID**
 10. Run the app on an emulator or physical device
 
 ## Usage
@@ -46,7 +46,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 * The google-services.json file contains your API keys and other configuration details, so be sure to keep it private and secure.
 
 ## Credits
-This app was created by [Rajadurai M]. If you have any questions or suggestions, please feel free to contact me.
+This app was created by **[rajaduraim1999]**. If you have any questions or suggestions, please feel free to contact me.
 
 ## Acknowledgements
 This project uses the following third-party libraries:

@@ -7,8 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.sample.android_native_google_login_integration.R;
-import com.sample.android_native_google_login_integration.javasample.JavaSampleActivity;
+import com.sample.android_native_google_login_integration.javasample.GoogleSignInActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         cvJava.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, JavaSampleActivity.class);
+                Intent intent = new Intent(MainActivity.this, GoogleSignInActivity.class);
                 startActivity(intent);
             }
         });

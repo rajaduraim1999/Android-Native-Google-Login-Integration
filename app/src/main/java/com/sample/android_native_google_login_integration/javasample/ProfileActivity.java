@@ -30,6 +30,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         Glide.with(ProfileActivity.this)
                 .load(googleProfileImage)
+                .circleCrop()
                 .into(ivUser);
 
         tvUserValue.setText(googleData);

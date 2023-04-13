@@ -2,10 +2,10 @@ package com.sample.android_native_google_login_integration.javasample;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 
@@ -19,18 +19,19 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.sample.android_native_google_login_integration.R;
 
-public class NativeGoogleSignInButtonActivity extends AppCompatActivity implements View.OnClickListener {
+public class GoogleSignInActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "GoogleSignIn";
 
-    SignInButton signInButton;
+    SignInButton sibGoogleSignIn;
+    CardView cvGoogleSignIn;
     private GoogleSignInClient mGoogleSignInClient;
     private static final int RC_SIGN_IN = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_native_google_sign_in_button);
+        setContentView(R.layout.activity_google_sign_in);
 
         initUI();
 
@@ -50,24 +51,27 @@ public class NativeGoogleSignInButtonActivity extends AppCompatActivity implemen
         updateUI(account);
 
         // Set the dimensions of the sign-in button.
-        SignInButton signInButton = findViewById(R.id.sign_in_button);
+        SignInButton signInButton = findViewById(R.id.sibGoogleSignIn);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
 
         signInButton.setOnClickListener(this);
+        cvGoogleSignIn.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.sign_in_button:
+            case R.id.sibGoogleSignIn:
+            case R.id.cvGoogleSignIn:
                 signIn();
                 break;
         }
     }
 
     private void initUI() {
-        signInButton = findViewById(R.id.sign_in_button);
+        sibGoogleSignIn = findViewById(R.id.sibGoogleSignIn);
+        cvGoogleSignIn = findViewById(R.id.cvGoogleSignIn);
     }
 
     private void signIn() {
@@ -117,7 +121,7 @@ public class NativeGoogleSignInButtonActivity extends AppCompatActivity implemen
             String googleData =  " personId : " + personId  +"\n\n"+ " personName : " + personName  +"\n\n"+ " personGivenName : " + personGivenName  +"\n\n"+ " personFamilyName : " + personFamilyName  +"\n\n"+ " personEmail : " + personEmail  +"\n\n"+ " personToken : " + personToken  +"\n\n"+ " personPhoto : " + personPhoto;
             Log.e("TAG", "updateUI : data : account : " + googleData);
 
-            Intent intent    =   new Intent(NativeGoogleSignInButtonActivity.this,ProfileActivity.class);
+            Intent intent    =   new Intent(GoogleSignInActivity.this,ProfileActivity.class);
             intent.putExtra("googleData",googleData);
             intent.putExtra("googleProfileImage", personPhoto);
             startActivity(intent);

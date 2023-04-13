@@ -17,13 +17,7 @@
             android:name=".javasample.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".javasample.CustomGoogleSignInButtonActivity"
-            android:exported="false" />
-        <activity
-            android:name=".javasample.NativeGoogleSignInButtonActivity"
-            android:exported="false" />
-        <activity
-            android:name=".javasample.JavaSampleActivity"
+            android:name=".javasample.GoogleSignInActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

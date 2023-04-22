@@ -7,14 +7,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".javasample.GoogleSignInActivity">
+    tools:context=".javasample.JavaGoogleSignInActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18dp"
         android:textColor="@color/black"
-        android:text="Java" />
+        android:text="Kotlin" />
 
     <TextView
         android:layout_width="wrap_content"

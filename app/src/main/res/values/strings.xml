@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Android-Native-Google-Login-Integration</string>
+    <string name="app_name">Google Login</string>
 
+
+    // This string resource is likely being used as the client ID for Google Login integration in an Android app.
     <string name="client_id">593074744027-7j9jtt99ru3m8rqjvf1kku8h447lhd2c.apps.googleusercontent.com</string>
 </resources>

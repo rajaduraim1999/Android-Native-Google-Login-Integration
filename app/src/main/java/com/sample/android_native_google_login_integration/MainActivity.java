@@ -7,7 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.sample.android_native_google_login_integration.javasample.GoogleSignInActivity;
+import com.sample.android_native_google_login_integration.javasample.JavaGoogleSignInActivity;
+import com.sample.android_native_google_login_integration.kotlinsample.KotlinGoogleSignInActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,23 +21,34 @@ public class MainActivity extends AppCompatActivity {
 
         initUI();
 
+        // `cvJava.setOnClickListener` sets a click listener on the `cvJava` CardView. When the
+        // CardView is clicked, it creates an intent to start the `JavaGoogleSignInActivity` and starts
+        // the activity using `startActivity(intent)`. This allows the user to navigate to the Java
+        // version of the Google Sign-In screen.
         cvJava.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, GoogleSignInActivity.class);
+                Intent intent = new Intent(MainActivity.this, JavaGoogleSignInActivity.class);
                 startActivity(intent);
             }
         });
 
+        // `cvKotlin.setOnClickListener` sets a click listener on the `cvKotlin` CardView. When the
+        // CardView is clicked, it creates an intent to start the `KotlinGoogleSignInActivity` and
+        // starts the activity using `startActivity(intent)`. This allows the user to navigate to the
+        // Kotlin version of the Google Sign-In screen.
         cvKotlin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, JavaSampleActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, KotlinGoogleSignInActivity.class);
+                startActivity(intent);
             }
         });
     }
 
+    /**
+     * The function initializes UI elements for Java and Kotlin.
+     */
     private void initUI() {
         cvJava = findViewById(R.id.cvJava);
         cvKotlin = findViewById(R.id.cvKotlin);

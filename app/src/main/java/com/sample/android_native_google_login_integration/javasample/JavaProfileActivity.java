@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.sample.android_native_google_login_integration.R;
 
-public class ProfileActivity extends AppCompatActivity {
+public class JavaProfileActivity extends AppCompatActivity {
 
     ImageView ivUser;
     TextView tvUserValue;
@@ -19,7 +19,7 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_java_profile);
 
         initUI();
 
@@ -28,7 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
         googleData = intent.getStringExtra("googleData");
         googleProfileImage = intent.getStringExtra("googleProfileImage");
 
-        Glide.with(ProfileActivity.this)
+        Glide.with(JavaProfileActivity.this)
                 .load(googleProfileImage)
                 .circleCrop()
                 .into(ivUser);
@@ -36,9 +36,12 @@ public class ProfileActivity extends AppCompatActivity {
         tvUserValue.setText(googleData);
     }
 
+    /**
+     * The function initializes the user interface by finding and assigning values to the ImageView and
+     * TextView objects.
+     */
     private void initUI() {
         ivUser = findViewById(R.id.ivUser);
         tvUserValue = findViewById(R.id.tvUserValue);
-
     }
 }

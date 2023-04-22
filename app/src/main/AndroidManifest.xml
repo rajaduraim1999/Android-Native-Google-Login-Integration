@@ -14,10 +14,16 @@
         android:theme="@style/Theme.AndroidNativeGoogleLoginIntegration"
         tools:targetApi="31">
         <activity
-            android:name=".javasample.ProfileActivity"
+            android:name=".kotlinsample.KotlinProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".javasample.GoogleSignInActivity"
+            android:name=".kotlinsample.KotlinGoogleSignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".javasample.JavaProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".javasample.JavaGoogleSignInActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
